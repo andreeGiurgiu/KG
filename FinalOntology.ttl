@@ -1,0 +1,2188 @@
+@prefix : <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <https://schema.org/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cr: <http://caressesrobot.org/ontology#> .
+@prefix wp: <http://webprotege.stanford.edu/> .
+
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51> rdf:type owl:Ontology .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://caressesrobot.org/ontology#hasAddressingop
+<http://caressesrobot.org/ontology#hasAddressingop> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <http://caressesrobot.org/ontology#User> ;
+                                                    rdfs:range <http://caressesrobot.org/ontology#Addressing> .
+
+
+###  http://caressesrobot.org/ontology#hasBeliefAndValueop
+<http://caressesrobot.org/ontology#hasBeliefAndValueop> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <http://caressesrobot.org/ontology#User> ;
+                                                        rdfs:range <http://caressesrobot.org/ontology#BeliefSystem> .
+
+
+###  http://caressesrobot.org/ontology#hasCParameter
+<http://caressesrobot.org/ontology#hasCParameter> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Agent> ;
+                                                  rdfs:range <http://caressesrobot.org/ontology#Topic> .
+
+
+###  http://caressesrobot.org/ontology#hasClothop
+<http://caressesrobot.org/ontology#hasClothop> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://caressesrobot.org/ontology#User> ;
+                                               rdfs:range <http://caressesrobot.org/ontology#Clothing> .
+
+
+###  http://caressesrobot.org/ontology#hasDistance
+<http://caressesrobot.org/ontology#hasDistance> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Agent> .
+
+
+###  http://caressesrobot.org/ontology#hasEventop
+<http://caressesrobot.org/ontology#hasEventop> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://caressesrobot.org/ontology#Event> ,
+                                                           <http://caressesrobot.org/ontology#User> ;
+                                               rdfs:range <http://caressesrobot.org/ontology#Event> ,
+                                                          <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> .
+
+
+###  http://caressesrobot.org/ontology#hasFeelingop
+<http://caressesrobot.org/ontology#hasFeelingop> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <http://caressesrobot.org/ontology#User> ;
+                                                 rdfs:range <http://caressesrobot.org/ontology#FeelingBad> ,
+                                                            <http://caressesrobot.org/ontology#FeelingWell> .
+
+
+###  http://caressesrobot.org/ontology#hasFoodop
+<http://caressesrobot.org/ontology#hasFoodop> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://caressesrobot.org/ontology#User> ;
+                                              rdfs:range <http://caressesrobot.org/ontology#Food> .
+
+
+###  http://caressesrobot.org/ontology#hasGameop
+<http://caressesrobot.org/ontology#hasGameop> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://caressesrobot.org/ontology#User> ;
+                                              rdfs:range <http://caressesrobot.org/ontology#Game> .
+
+
+###  http://caressesrobot.org/ontology#hasGoalop
+<http://caressesrobot.org/ontology#hasGoalop> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://caressesrobot.org/ontology#Goal> ,
+                                                          <http://caressesrobot.org/ontology#Robot> ,
+                                                          <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EndGoal> ;
+                                              rdfs:range <http://caressesrobot.org/ontology#Goal> ,
+                                                         <http://caressesrobot.org/ontology#Robot> .
+
+
+###  http://caressesrobot.org/ontology#hasHabitop
+<http://caressesrobot.org/ontology#hasHabitop> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://caressesrobot.org/ontology#User> ;
+                                               rdfs:range <http://caressesrobot.org/ontology#Habit> .
+
+
+###  http://caressesrobot.org/ontology#hasHealthProblemop
+<http://caressesrobot.org/ontology#hasHealthProblemop> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <http://caressesrobot.org/ontology#User> ;
+                                                       rdfs:range <http://caressesrobot.org/ontology#HavingHealthProblems> .
+
+
+###  http://caressesrobot.org/ontology#hasHealthop
+<http://caressesrobot.org/ontology#hasHealthop> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://caressesrobot.org/ontology#User> ;
+                                                rdfs:range <http://caressesrobot.org/ontology#PhysicalAndMentalCondition> .
+
+
+###  http://caressesrobot.org/ontology#hasLanguage
+<http://caressesrobot.org/ontology#hasLanguage> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Agent> .
+
+
+###  http://caressesrobot.org/ontology#hasLifeop
+<http://caressesrobot.org/ontology#hasLifeop> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://caressesrobot.org/ontology#User> ;
+                                              rdfs:range <http://caressesrobot.org/ontology#TopicAboutOnesLife> .
+
+
+###  http://caressesrobot.org/ontology#hasMannerop
+<http://caressesrobot.org/ontology#hasMannerop> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://caressesrobot.org/ontology#User> ;
+                                                rdfs:range <http://caressesrobot.org/ontology#Manner> .
+
+
+###  http://caressesrobot.org/ontology#hasMusicop
+<http://caressesrobot.org/ontology#hasMusicop> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://caressesrobot.org/ontology#User> ;
+                                               rdfs:range <http://caressesrobot.org/ontology#Music> .
+
+
+###  http://caressesrobot.org/ontology#hasNormop
+<http://caressesrobot.org/ontology#hasNormop> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://caressesrobot.org/ontology#User> ;
+                                              rdfs:range <http://caressesrobot.org/ontology#Norm> .
+
+
+###  http://caressesrobot.org/ontology#hasObjectop
+<http://caressesrobot.org/ontology#hasObjectop> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://caressesrobot.org/ontology#User> ;
+                                                rdfs:range <http://caressesrobot.org/ontology#Object> ,
+                                                           <http://caressesrobot.org/ontology#TopicOneCanHavePreferenceAbout> .
+
+
+###  http://caressesrobot.org/ontology#hasPhysicalAndMentalStateop
+<http://caressesrobot.org/ontology#hasPhysicalAndMentalStateop> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain <http://caressesrobot.org/ontology#User> ;
+                                                                rdfs:range <http://caressesrobot.org/ontology#PhysicalAndMentalCondition> .
+
+
+###  http://caressesrobot.org/ontology#hasPhysicalEnvironmentop
+<http://caressesrobot.org/ontology#hasPhysicalEnvironmentop> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain <http://caressesrobot.org/ontology#User> ;
+                                                             rdfs:range <http://caressesrobot.org/ontology#PhysicalEnvironment> .
+
+
+###  http://caressesrobot.org/ontology#hasPitch
+<http://caressesrobot.org/ontology#hasPitch> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Agent> .
+
+
+###  http://caressesrobot.org/ontology#hasReligionop
+<http://caressesrobot.org/ontology#hasReligionop> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <http://caressesrobot.org/ontology#User> ;
+                                                  rdfs:range <http://caressesrobot.org/ontology#Religion> .
+
+
+###  http://caressesrobot.org/ontology#hasRobotop
+<http://caressesrobot.org/ontology#hasRobotop> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://caressesrobot.org/ontology#Robot> ,
+                                                           <http://caressesrobot.org/ontology#User> ;
+                                               rdfs:range <http://caressesrobot.org/ontology#Robot> ,
+                                                          <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent> .
+
+
+###  http://caressesrobot.org/ontology#hasSocialEnvironmentop
+<http://caressesrobot.org/ontology#hasSocialEnvironmentop> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain <http://caressesrobot.org/ontology#User> ;
+                                                           rdfs:range <http://caressesrobot.org/ontology#SocialEnvironment> .
+
+
+###  http://caressesrobot.org/ontology#hasSpeed
+<http://caressesrobot.org/ontology#hasSpeed> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Agent> .
+
+
+###  http://caressesrobot.org/ontology#hasSuggestion
+<http://caressesrobot.org/ontology#hasSuggestion> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Agent> .
+
+
+###  http://caressesrobot.org/ontology#hasUserName
+<http://caressesrobot.org/ontology#hasUserName> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Agent> .
+
+
+###  http://caressesrobot.org/ontology#hasWaitingTime
+<http://caressesrobot.org/ontology#hasWaitingTime> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Agent> .
+
+
+###  http://webprotege.stanford.edu/R7RBALb0MNK2GboLd2bbmzu
+<http://webprotege.stanford.edu/R7RBALb0MNK2GboLd2bbmzu> rdf:type owl:ObjectProperty ;
+                                                         rdfs:label "partOf"@en .
+
+
+###  http://webprotege.stanford.edu/R7WbVZEfJz4r7ePsnQ0FQZh
+<http://webprotege.stanford.edu/R7WbVZEfJz4r7ePsnQ0FQZh> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:domain <http://webprotege.stanford.edu/RBX4tpiW9NTr9B05tfGd7xz> ;
+                                                         rdfs:range <http://webprotege.stanford.edu/R83sQEGoISKKTq0Qqbt0921> ;
+                                                         rdfs:label "hasSettings"@en .
+
+
+###  http://webprotege.stanford.edu/R8l29C9EXKgPhS5pRicZuvt
+<http://webprotege.stanford.edu/R8l29C9EXKgPhS5pRicZuvt> rdf:type owl:ObjectProperty ;
+                                                         rdfs:label "involvesFactor"@en .
+
+
+###  http://webprotege.stanford.edu/R908pFLH6ON2q8F2nn0lBhU
+<http://webprotege.stanford.edu/R908pFLH6ON2q8F2nn0lBhU> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:domain <http://webprotege.stanford.edu/R7N8xlW48mWQqtwfhpbr4P3> ;
+                                                         rdfs:range <http://webprotege.stanford.edu/R7EdzGFV5LjYcLBwMjvuBX> ;
+                                                         rdfs:label "hasGeneralisation"@en .
+
+
+###  http://webprotege.stanford.edu/R9Sa5KMjYzR6HxeRAEWK8LU
+<http://webprotege.stanford.edu/R9Sa5KMjYzR6HxeRAEWK8LU> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:domain <http://webprotege.stanford.edu/R7N8xlW48mWQqtwfhpbr4P3> ;
+                                                         rdfs:range <http://webprotege.stanford.edu/RDq1ITXxRilqlyh1HVfW6az> ;
+                                                         rdfs:label "hasHumanCalibration"@en .
+
+
+###  http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR
+<http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> rdf:type owl:ObjectProperty ;
+                                                         rdfs:range <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor> ;
+                                                         owl:propertyChainAxiom ( <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/describesScenario>
+                                                                                  <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR>
+                                                                                ) ;
+                                                         rdfs:label "hasAgent"@en .
+
+
+###  http://webprotege.stanford.edu/RBUzBGY3c3Wvkh2DPwzyPSC
+<http://webprotege.stanford.edu/RBUzBGY3c3Wvkh2DPwzyPSC> rdf:type owl:ObjectProperty ;
+                                                         rdfs:label "considersFactor"@en .
+
+
+###  http://webprotege.stanford.edu/RBYGcEdiqSGFoa8wQOU6mK1
+<http://webprotege.stanford.edu/RBYGcEdiqSGFoa8wQOU6mK1> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:range <http://webprotege.stanford.edu/R8s5V56zgX2LzaYacaq4k4r> ;
+                                                         rdfs:label "hasEvaluation"@en .
+
+
+###  http://webprotege.stanford.edu/RDz2FfIVCEqGm2E2j26hCfi
+<http://webprotege.stanford.edu/RDz2FfIVCEqGm2E2j26hCfi> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:range <http://webprotege.stanford.edu/R7N8xlW48mWQqtwfhpbr4P3> ;
+                                                         owl:propertyChainAxiom ( <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/describesScenario>
+                                                                                  <http://webprotege.stanford.edu/RDz2FfIVCEqGm2E2j26hCfi>
+                                                                                ) ;
+                                                         rdfs:label "hasAIComponent"@en .
+
+
+###  http://webprotege.stanford.edu/Rhcx9g2XJ866Uy96SB8ntP
+<http://webprotege.stanford.edu/Rhcx9g2XJ866Uy96SB8ntP> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:domain <http://webprotege.stanford.edu/RBX4tpiW9NTr9B05tfGd7xz> ;
+                                                        rdfs:range <http://webprotege.stanford.edu/RBo1xAvYzFirAJHx2vQQvb> ;
+                                                        rdfs:label "hasHypothesis"@en .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51#adoptsGoal
+:adoptsGoal rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51#coordinatesWith
+:coordinatesWith rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51#delegatesTask
+:delegatesTask rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51#influences
+:influences rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/IsCommittedTo
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/IsCommittedTo> rdf:type owl:ObjectProperty ;
+                                                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                                         rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor> ;
+                                                                                         rdfs:range <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor> ;
+                                                                                         owl:propertyChainAxiom ( <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasSocialCommitment>
+                                                                                                                ) .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/capability
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/capability> rdf:type owl:ObjectProperty ;
+                                                                                      rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor> ;
+                                                                                      rdfs:range <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Capability> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/context
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/context> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ;
+                                                                                   rdfs:range <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Context> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/describedIn
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/describedIn> rdf:type owl:ObjectProperty ;
+                                                                                       owl:inverseOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/describesScenario> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/describesScenario
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/describesScenario> rdf:type owl:ObjectProperty ;
+                                                                                             rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper> ;
+                                                                                             rdfs:range <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/domain
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/domain> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:range <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Domain> ;
+                                                                                  owl:propertyChainAxiom ( <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/describesScenario>
+                                                                                                           <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/domain>
+                                                                                                         ) .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/endgoal
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/endgoal> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ;
+                                                                                   rdfs:range <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Endgoal> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasAuthor
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasAuthor> rdf:type owl:ObjectProperty ;
+                                                                                     rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ;
+                                                                                     rdfs:range <http://purl.org/ontology/bibo/Author> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasCitation
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasCitation> rdf:type owl:ObjectProperty ;
+                                                                                       rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ;
+                                                                                       rdfs:range <http://purl.org/ontology/bibo/Citation> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration> rdf:type owl:ObjectProperty ;
+                                                                                                   rdfs:range <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration> ;
+                                                                                                   owl:propertyChainAxiom ( <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/describesScenario>
+                                                                                                                            <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration>
+                                                                                                                          ) .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasInteraction
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasInteraction> rdf:type owl:ObjectProperty ;
+                                                                                          rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ;
+                                                                                          rdfs:range <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasPaper
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasPaper> rdf:type owl:ObjectProperty ;
+                                                                                    rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ;
+                                                                                    rdfs:range <http://purl.org/ontology/bibo/Document> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasSocialCommitment
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasSocialCommitment> rdf:type owl:ObjectProperty ;
+                                                                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                                               rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor> ;
+                                                                                               rdfs:range <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SocialCommitment> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/inScenario
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/inScenario> rdf:type owl:ObjectProperty ;
+                                                                                      rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                                      rdfs:range <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/informationMethod
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/informationMethod> rdf:type owl:ObjectProperty ;
+                                                                                             rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InformationProcessing> ;
+                                                                                             rdfs:range <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingMethod> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactingAgent
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactingAgent> rdf:type owl:ObjectProperty ;
+                                                                                            rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction> ;
+                                                                                            rdfs:range <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactionMethod
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactionMethod> rdf:type owl:ObjectProperty ;
+                                                                                             rdfs:range <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionMethod> ;
+                                                                                             owl:propertyChainAxiom ( <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/describesScenario>
+                                                                                                                      <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactionMethod>
+                                                                                                                    ) .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactionTask
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactionTask> rdf:type owl:ObjectProperty ;
+                                                                                           rdfs:range <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionTask> ;
+                                                                                           owl:propertyChainAxiom ( <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/describesScenario>
+                                                                                                                    <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactionTask>
+                                                                                                                  ) .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/processingInformation
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/processingInformation> rdf:type owl:ObjectProperty ;
+                                                                                                 rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor> ;
+                                                                                                 rdfs:range <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InformationProcessing> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/processingTask
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/processingTask> rdf:type owl:ObjectProperty ;
+                                                                                          rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InformationProcessing> ;
+                                                                                          rdfs:range <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask> ;
+                                                                                          owl:propertyChainAxiom ( <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/describesScenario>
+                                                                                                                   <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/processingTask>
+                                                                                                                 ) .
+
+
+###  http://xmlns.com/foaf/0.1/depiction
+<http://xmlns.com/foaf/0.1/depiction> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+                                      rdfs:range <http://xmlns.com/foaf/0.1/Image> .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <http://xmlns.com/foaf/0.1/Person> .
+
+
+###  http://xmlns.com/foaf/0.1/knows
+<http://xmlns.com/foaf/0.1/knows> rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HumanAgent> ,
+                                              <http://xmlns.com/foaf/0.1/Person> ;
+                                  rdfs:range <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HumanAgent> ,
+                                             <http://xmlns.com/foaf/0.1/Person> .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:ObjectProperty ;
+                                 rdfs:domain <http://xmlns.com/foaf/0.1/Person> .
+
+
+###  https://schema.org/address
+<https://schema.org/address> rdf:type owl:ObjectProperty ;
+                             rdfs:domain <https://schema.org/Person> ;
+                             rdfs:range <https://schema.org/PostalAddress> .
+
+
+###  https://schema.org/gender
+<https://schema.org/gender> rdf:type owl:ObjectProperty ;
+                            rdfs:domain <https://schema.org/Person> .
+
+
+###  https://schema.org/name
+<https://schema.org/name> rdf:type owl:ObjectProperty ;
+                          rdfs:domain <https://schema.org/Person> .
+
+
+###  https://schema.org/worksFor
+<https://schema.org/worksFor> rdf:type owl:ObjectProperty ;
+                              rdfs:domain <https://schema.org/Person> ;
+                              rdfs:range <https://schema.org/Organization> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://caressesrobot.org/ontology#hasDistance
+<http://caressesrobot.org/ontology#hasDistance> rdf:type owl:DatatypeProperty ;
+                                                rdfs:range xsd:float .
+
+
+###  http://caressesrobot.org/ontology#hasLanguage
+<http://caressesrobot.org/ontology#hasLanguage> rdf:type owl:DatatypeProperty ;
+                                                rdfs:range xsd:string .
+
+
+###  http://caressesrobot.org/ontology#hasPDDL
+<http://caressesrobot.org/ontology#hasPDDL> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <http://caressesrobot.org/ontology#Goal> ,
+                                                        <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EndGoal> ;
+                                            rdfs:range xsd:string .
+
+
+###  http://caressesrobot.org/ontology#hasPitch
+<http://caressesrobot.org/ontology#hasPitch> rdf:type owl:DatatypeProperty ;
+                                             rdfs:range xsd:float .
+
+
+###  http://caressesrobot.org/ontology#hasQuestion-tdp
+<http://caressesrobot.org/ontology#hasQuestion-tdp> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <http://caressesrobot.org/ontology#Goal> ,
+                                                                <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EndGoal> ;
+                                                    rdfs:range xsd:string .
+
+
+###  http://caressesrobot.org/ontology#hasSpeed
+<http://caressesrobot.org/ontology#hasSpeed> rdf:type owl:DatatypeProperty ;
+                                             rdfs:range xsd:float .
+
+
+###  http://caressesrobot.org/ontology#hasSuggestion
+<http://caressesrobot.org/ontology#hasSuggestion> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:range xsd:string .
+
+
+###  http://caressesrobot.org/ontology#hasTablet-viewdp
+<http://caressesrobot.org/ontology#hasTablet-viewdp> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <http://caressesrobot.org/ontology#Goal> ,
+                                                                 <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EndGoal> ;
+                                                     rdfs:range xsd:string .
+
+
+###  http://caressesrobot.org/ontology#hasUserName
+<http://caressesrobot.org/ontology#hasUserName> rdf:type owl:DatatypeProperty ;
+                                                rdfs:range xsd:string .
+
+
+###  http://caressesrobot.org/ontology#hasWaitingTime
+<http://caressesrobot.org/ontology#hasWaitingTime> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:range xsd:float .
+
+
+###  http://purl.org/ontology/bibo/hasIssue
+<http://purl.org/ontology/bibo/hasIssue> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ;
+                                         rdfs:range xsd:string .
+
+
+###  http://purl.org/ontology/bibo/hasVolume
+<http://purl.org/ontology/bibo/hasVolume> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ;
+                                          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasTitle
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasTitle> rdf:type owl:DatatypeProperty ;
+                                                                                    rdfs:domain <http://purl.org/ontology/bibo/Document> ;
+                                                                                    rdfs:range xsd:string .
+
+
+###  http://xmlns.com/foaf/0.1/familyName
+<http://xmlns.com/foaf/0.1/familyName> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+                                       rdfs:range xsd:string .
+
+
+###  http://xmlns.com/foaf/0.1/givenName
+<http://xmlns.com/foaf/0.1/givenName> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+                                      rdfs:range xsd:string .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> rdf:type owl:DatatypeProperty ;
+                                     rdfs:range xsd:anyURI .
+
+
+###  http://xmlns.com/foaf/0.1/mbox
+<http://xmlns.com/foaf/0.1/mbox> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+                                 rdfs:range xsd:string .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:DatatypeProperty ;
+                                 rdfs:range xsd:string .
+
+
+###  https://schema.org/birthDate
+<https://schema.org/birthDate> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <https://schema.org/Person> ;
+                               rdfs:range xsd:date .
+
+
+###  https://schema.org/email
+<https://schema.org/email> rdf:type owl:DatatypeProperty ;
+                           rdfs:domain <https://schema.org/Person> ;
+                           rdfs:range xsd:string .
+
+
+###  https://schema.org/gender
+<https://schema.org/gender> rdf:type owl:DatatypeProperty ;
+                            rdfs:range xsd:string .
+
+
+###  https://schema.org/jobTitle
+<https://schema.org/jobTitle> rdf:type owl:DatatypeProperty ;
+                              rdfs:domain <https://schema.org/Person> ;
+                              rdfs:range xsd:string .
+
+
+###  https://schema.org/name
+<https://schema.org/name> rdf:type owl:DatatypeProperty ;
+                          rdfs:range xsd:string .
+
+
+###  https://schema.org/telephone
+<https://schema.org/telephone> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <https://schema.org/Person> ;
+                               rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://caressesrobot.org/ontology#Addressing
+<http://caressesrobot.org/ontology#Addressing> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#BeliefSystem
+<http://caressesrobot.org/ontology#BeliefSystem> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#Clothing
+<http://caressesrobot.org/ontology#Clothing> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#Event
+<http://caressesrobot.org/ontology#Event> rdf:type owl:Class ;
+                                          owl:equivalentClass <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> .
+
+
+###  http://caressesrobot.org/ontology#FeelingBad
+<http://caressesrobot.org/ontology#FeelingBad> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#FeelingWell
+<http://caressesrobot.org/ontology#FeelingWell> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#Food
+<http://caressesrobot.org/ontology#Food> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#Game
+<http://caressesrobot.org/ontology#Game> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#Goal
+<http://caressesrobot.org/ontology#Goal> rdf:type owl:Class ;
+                                         owl:equivalentClass <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EndGoal> .
+
+
+###  http://caressesrobot.org/ontology#Habit
+<http://caressesrobot.org/ontology#Habit> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#HavingHealthProblems
+<http://caressesrobot.org/ontology#HavingHealthProblems> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#Manner
+<http://caressesrobot.org/ontology#Manner> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#Music
+<http://caressesrobot.org/ontology#Music> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#Norm
+<http://caressesrobot.org/ontology#Norm> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#Object
+<http://caressesrobot.org/ontology#Object> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#Parameter
+<http://caressesrobot.org/ontology#Parameter> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#PhysicalAndMentalCondition
+<http://caressesrobot.org/ontology#PhysicalAndMentalCondition> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#PhysicalEnvironment
+<http://caressesrobot.org/ontology#PhysicalEnvironment> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#Religion
+<http://caressesrobot.org/ontology#Religion> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#Robot
+<http://caressesrobot.org/ontology#Robot> rdf:type owl:Class ;
+                                          owl:equivalentClass <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent> .
+
+
+###  http://caressesrobot.org/ontology#SocialEnvironment
+<http://caressesrobot.org/ontology#SocialEnvironment> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#SocialEvent
+<http://caressesrobot.org/ontology#SocialEvent> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> .
+
+
+###  http://caressesrobot.org/ontology#Topic
+<http://caressesrobot.org/ontology#Topic> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#TopicAboutOnesLife
+<http://caressesrobot.org/ontology#TopicAboutOnesLife> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#TopicOneCanHavePreferenceAbout
+<http://caressesrobot.org/ontology#TopicOneCanHavePreferenceAbout> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#User
+<http://caressesrobot.org/ontology#User> rdf:type owl:Class .
+
+
+###  http://caressesrobot.org/ontology#YearlyEvent
+<http://caressesrobot.org/ontology#YearlyEvent> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> .
+
+
+###  http://purl.org/ontology/bibo/Author
+<http://purl.org/ontology/bibo/Author> rdf:type owl:Class .
+
+
+###  http://purl.org/ontology/bibo/Citation
+<http://purl.org/ontology/bibo/Citation> rdf:type owl:Class .
+
+
+###  http://purl.org/ontology/bibo/Document
+<http://purl.org/ontology/bibo/Document> rdf:type owl:Class .
+
+
+###  http://webprotege.stanford.edu/R28UKpkU3djqDapS0PZmOg
+<http://webprotege.stanford.edu/R28UKpkU3djqDapS0PZmOg> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration> ;
+                                                        rdfs:label "Mitigation"@en .
+
+
+###  http://webprotege.stanford.edu/R7EdzGFV5LjYcLBwMjvuBX
+<http://webprotege.stanford.edu/R7EdzGFV5LjYcLBwMjvuBX> rdf:type owl:Class ;
+                                                        rdfs:label "Generalization"@en .
+
+
+###  http://webprotege.stanford.edu/R7N8xlW48mWQqtwfhpbr4P3
+<http://webprotege.stanford.edu/R7N8xlW48mWQqtwfhpbr4P3> rdf:type owl:Class ;
+                                                         rdfs:subClassOf owl:Thing ;
+                                                         rdfs:label "AIComponent"@en .
+
+
+###  http://webprotege.stanford.edu/R7lb1mclxeQoE1lCUrsyck0
+<http://webprotege.stanford.edu/R7lb1mclxeQoE1lCUrsyck0> rdf:type owl:Class ;
+                                                         rdfs:label "DecisionFactor"@en .
+
+
+###  http://webprotege.stanford.edu/R7mArlFAsqWNLFwQ2vCiTnF
+<http://webprotege.stanford.edu/R7mArlFAsqWNLFwQ2vCiTnF> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor> ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/RBUzBGY3c3Wvkh2DPwzyPSC> ;
+                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/R7qUJOQXT7YkynqcWpfLtb9>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/RBUzBGY3c3Wvkh2DPwzyPSC> ;
+                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/R7xT7CR1FOMAEDL1XbenFcU>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/RBUzBGY3c3Wvkh2DPwzyPSC> ;
+                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/RDugp87sUWjDlW6dRBisE6W>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/RBUzBGY3c3Wvkh2DPwzyPSC> ;
+                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/RYLm8UVhWc62gQMUZYiUYh>
+                                                                         ] ;
+                                                         rdfs:label "User"@en .
+
+
+###  http://webprotege.stanford.edu/R7q54aFhAWY3QwwvSNABowg
+<http://webprotege.stanford.edu/R7q54aFhAWY3QwwvSNABowg> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/RBo1xAvYzFirAJHx2vQQvb> ;
+                                                         rdfs:label "H0"@en .
+
+
+###  http://webprotege.stanford.edu/R7qUJOQXT7YkynqcWpfLtb9
+<http://webprotege.stanford.edu/R7qUJOQXT7YkynqcWpfLtb9> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/R7lb1mclxeQoE1lCUrsyck0> ;
+                                                         rdfs:label "PersonalExperience"@en .
+
+
+###  http://webprotege.stanford.edu/R7xT7CR1FOMAEDL1XbenFcU
+<http://webprotege.stanford.edu/R7xT7CR1FOMAEDL1XbenFcU> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/R7lb1mclxeQoE1lCUrsyck0> ;
+                                                         rdfs:label "ImpactOnOthers"@en .
+
+
+###  http://webprotege.stanford.edu/R83sQEGoISKKTq0Qqbt0921
+<http://webprotege.stanford.edu/R83sQEGoISKKTq0Qqbt0921> rdf:type owl:Class ;
+                                                         rdfs:label "Settings"@en .
+
+
+###  http://webprotege.stanford.edu/R8s5V56zgX2LzaYacaq4k4r
+<http://webprotege.stanford.edu/R8s5V56zgX2LzaYacaq4k4r> rdf:type owl:Class ;
+                                                         rdfs:label "Evaluation"@en .
+
+
+###  http://webprotege.stanford.edu/R974KWLHbQiSe4BiDbpTZif
+<http://webprotege.stanford.edu/R974KWLHbQiSe4BiDbpTZif> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor> ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> ;
+                                                                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                           owl:onClass <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> ;
+                                                                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                           owl:onClass <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Human>
+                                                                         ] ;
+                                                         rdfs:label "HybridIntelligent"@en .
+
+
+###  http://webprotege.stanford.edu/R98UmRQ7AL8WOs6QkYt6mXu
+<http://webprotege.stanford.edu/R98UmRQ7AL8WOs6QkYt6mXu> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/R8l29C9EXKgPhS5pRicZuvt> ;
+                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/R7qUJOQXT7YkynqcWpfLtb9>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/R8l29C9EXKgPhS5pRicZuvt> ;
+                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/R7xT7CR1FOMAEDL1XbenFcU>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/R8l29C9EXKgPhS5pRicZuvt> ;
+                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/RDugp87sUWjDlW6dRBisE6W>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/R8l29C9EXKgPhS5pRicZuvt> ;
+                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/RYLm8UVhWc62gQMUZYiUYh>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> ;
+                                                                           owl:someValuesFrom <http://webprotege.stanford.edu/R7mArlFAsqWNLFwQ2vCiTnF>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> ;
+                                                                           owl:hasValue <http://webprotege.stanford.edu/R9FwArVzRxw5YJoz4LFUrij>
+                                                                         ] ;
+                                                         rdfs:label "EthicalDecisionScenario"@en .
+
+
+###  http://webprotege.stanford.edu/R9sxOvsZvyQbMSKTY9pFseo
+<http://webprotege.stanford.edu/R9sxOvsZvyQbMSKTY9pFseo> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration> ;
+                                                         rdfs:label "EthicalPreference"@en .
+
+
+###  http://webprotege.stanford.edu/RBX0CDoPfZ2tYtGHbrKSqj2
+<http://webprotege.stanford.edu/RBX0CDoPfZ2tYtGHbrKSqj2> rdf:type owl:Class ;
+                                                         rdfs:subClassOf owl:Thing ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/R7RBALb0MNK2GboLd2bbmzu> ;
+                                                                           owl:someValuesFrom <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent>
+                                                                         ] ;
+                                                         rdfs:label "Product"@en .
+
+
+###  http://webprotege.stanford.edu/RBX4tpiW9NTr9B05tfGd7xz
+<http://webprotege.stanford.edu/RBX4tpiW9NTr9B05tfGd7xz> rdf:type owl:Class ;
+                                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> ;
+                                                                           owl:someValuesFrom <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor>
+                                                                         ] ;
+                                                         rdfs:label "Experiment"@en .
+
+
+###  http://webprotege.stanford.edu/RBo1xAvYzFirAJHx2vQQvb
+<http://webprotege.stanford.edu/RBo1xAvYzFirAJHx2vQQvb> rdf:type owl:Class ;
+                                                        rdfs:label "Outcome"@en .
+
+
+###  http://webprotege.stanford.edu/RByjZuCE0k3BkgIO9ZKSxX3
+<http://webprotege.stanford.edu/RByjZuCE0k3BkgIO9ZKSxX3> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration> ;
+                                                         rdfs:label "SurveillanceRisk"@en .
+
+
+###  http://webprotege.stanford.edu/RC8driYRv5AOPWH4Lt3ko6D
+<http://webprotege.stanford.edu/RC8driYRv5AOPWH4Lt3ko6D> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration> ;
+                                                         rdfs:label "Trust"@en .
+
+
+###  http://webprotege.stanford.edu/RCTj2GYfzj9eiGHTj3Bx2gN
+<http://webprotege.stanford.edu/RCTj2GYfzj9eiGHTj3Bx2gN> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/R7N8xlW48mWQqtwfhpbr4P3> ;
+                                                         rdfs:label "DecisionMakingComponent"@en .
+
+
+###  http://webprotege.stanford.edu/RCUnyALP3vdjgbyXAktIoiv
+<http://webprotege.stanford.edu/RCUnyALP3vdjgbyXAktIoiv> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/R7N8xlW48mWQqtwfhpbr4P3> ;
+                                                         rdfs:label "LearningComponent"@en .
+
+
+###  http://webprotege.stanford.edu/RDq1ITXxRilqlyh1HVfW6az
+<http://webprotege.stanford.edu/RDq1ITXxRilqlyh1HVfW6az> rdf:type owl:Class ;
+                                                         rdfs:label "HumanCalibration"@en .
+
+
+###  http://webprotege.stanford.edu/RDugp87sUWjDlW6dRBisE6W
+<http://webprotege.stanford.edu/RDugp87sUWjDlW6dRBisE6W> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/R7lb1mclxeQoE1lCUrsyck0> ;
+                                                         rdfs:label "ImpactOnSelf"@en .
+
+
+###  http://webprotege.stanford.edu/RDwJXy6GSrchjXmSoSOjDW9
+<http://webprotege.stanford.edu/RDwJXy6GSrchjXmSoSOjDW9> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/RBo1xAvYzFirAJHx2vQQvb> ;
+                                                         rdfs:label "H1"@en .
+
+
+###  http://webprotege.stanford.edu/RYLm8UVhWc62gQMUZYiUYh
+<http://webprotege.stanford.edu/RYLm8UVhWc62gQMUZYiUYh> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://webprotege.stanford.edu/R7lb1mclxeQoE1lCUrsyck0> ;
+                                                        rdfs:label "RespectForLaw"@en .
+
+
+###  http://webprotege.stanford.edu/Rzkf0AOFUz3fh8sPA0WpUA
+<http://webprotege.stanford.edu/Rzkf0AOFUz3fh8sPA0WpUA> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration> ;
+                                                        rdfs:label "PrivacyProtection"@en .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51#User
+:User rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Agent
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Agent> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AnticipatoryCoordination
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AnticipatoryCoordination> rdf:type owl:Class ;
+                                                                                                    rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Coordination> ;
+                                                                                                    rdfs:comment "predicting another agent’s actions and adjusting proactively" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Capability
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Capability> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/CommunicationAction
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/CommunicationAction> rdf:type owl:Class ;
+                                                                                               rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SocialAction> ;
+                                                                                               rdfs:comment "Specific action involving explicit messaging" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Context
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Context> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Coordination
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Coordination> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Delegation
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Delegation> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SocialAction> ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty :delegatesTask ;
+                                                                                                        owl:someValuesFrom <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask>
+                                                                                                      ] .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/DependenceRelation
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/DependenceRelation> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionMethod> ;
+                                                                                              rdfs:comment "Represents dependence structures between agents" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Domain
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Domain> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EndGoal
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EndGoal> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://caressesrobot.org/ontology#Parameter> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Endgoal
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Endgoal> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration> rdf:type owl:Class ;
+                                                                                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                                  owl:onProperty <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration> ;
+                                                                                                                  owl:someValuesFrom <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario>
+                                                                                                                ] .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/GoalAdoption
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/GoalAdoption> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SocialAction> ,
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty :adoptsGoal ;
+                                                                                                          owl:someValuesFrom <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Endgoal>
+                                                                                                        ] ;
+                                                                                        rdfs:comment "One agent adopts another’s goal" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Human
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Human> rdf:type owl:Class ;
+                                                                                 owl:equivalentClass <http://xmlns.com/foaf/0.1/Person> ,
+                                                                                                     <https://schema.org/Person> ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HumanAgent
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/HumanAgent> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InfluencingAction
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InfluencingAction> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SocialAction> ,
+                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                               owl:onProperty :influences ;
+                                                                                                               owl:someValuesFrom <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor>
+                                                                                                             ] ,
+                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                               owl:onProperty :influences ;
+                                                                                                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                               owl:onClass <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor>
+                                                                                                             ] ;
+                                                                                             rdfs:comment "Where an agent modifies another’s beliefs/goals" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InformationProcessing
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InformationProcessing> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasInteraction> ;
+                                                                                                         owl:someValuesFrom <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor>
+                                                                                                       ] .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionMethod
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionMethod> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionTask
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionTask> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/NegativeCoordination
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/NegativeCoordination> rdf:type owl:Class ;
+                                                                                                rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Coordination> ;
+                                                                                                rdfs:comment "predicting another agent’s actions and adjusting proactively" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://purl.org/ontology/bibo/Document> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/PositiveCoordination
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/PositiveCoordination> rdf:type owl:Class ;
+                                                                                                rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Coordination> ;
+                                                                                                rdfs:comment "aligning actions for mutual benefit" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/PowerRelation
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/PowerRelation> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration> ;
+                                                                                         rdfs:comment "Represents influence dynamics among agents" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingMethod
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingMethod> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ReactiveCoordination
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ReactiveCoordination> rdf:type owl:Class ;
+                                                                                                rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Coordination> ;
+                                                                                                rdfs:comment "adjusting in real-time to another agent’s actions" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SocialAction
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SocialAction> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionTask> ,
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> ;
+                                                                                                          owl:someValuesFrom <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor>
+                                                                                                        ] .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SocialCommitment
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SocialCommitment> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/StrongSocialAction
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/StrongSocialAction> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SocialAction> ;
+                                                                                              rdfs:comment "Goal-directed social action" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/WeakSocialAction
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/WeakSocialAction> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SocialAction> ;
+                                                                                            rdfs:comment "Belief-based social action" .
+
+
+###  http://xmlns.com/foaf/0.1/Image
+<http://xmlns.com/foaf/0.1/Image> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+
+
+###  https://schema.org/Organization
+<https://schema.org/Organization> rdf:type owl:Class .
+
+
+###  https://schema.org/Person
+<https://schema.org/Person> rdf:type owl:Class .
+
+
+###  https://schema.org/PostalAddress
+<https://schema.org/PostalAddress> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://webprotege.stanford.edu/R4MKmIsAkyWIwBuSOAtZN6
+<http://webprotege.stanford.edu/R4MKmIsAkyWIwBuSOAtZN6> rdf:type owl:NamedIndividual ,
+                                                                 <http://webprotege.stanford.edu/R8s5V56zgX2LzaYacaq4k4r> ;
+                                                        rdfs:label "Simulation"@en .
+
+
+###  http://webprotege.stanford.edu/R72gfbkwERIZ1VGEkLgtTU1
+<http://webprotege.stanford.edu/R72gfbkwERIZ1VGEkLgtTU1> rdf:type owl:NamedIndividual ,
+                                                                  <http://webprotege.stanford.edu/R8s5V56zgX2LzaYacaq4k4r> ;
+                                                         rdfs:label "A/B Testing"@en .
+
+
+###  http://webprotege.stanford.edu/R7L3KLrm8cLtFdMAA89UmTk
+<http://webprotege.stanford.edu/R7L3KLrm8cLtFdMAA89UmTk> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> ;
+                                                                    owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                    owl:onClass <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor>
+                                                                  ] ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactionMethod> <http://webprotege.stanford.edu/RcBYlApBcbGhmcXc0b6LTz> ;
+                                                         rdfs:label "Multi_Agent"@en .
+
+
+###  http://webprotege.stanford.edu/R7Pi79vGgBDsoAu5EYTCyRj
+<http://webprotege.stanford.edu/R7Pi79vGgBDsoAu5EYTCyRj> rdf:type owl:NamedIndividual ,
+                                                                  <http://webprotege.stanford.edu/R974KWLHbQiSe4BiDbpTZif> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactionMethod> <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Contribution-based> ;
+                                                         rdfs:label "Contribution_Based_Agent"@en .
+
+
+###  http://webprotege.stanford.edu/R7PrkJQokJKieMcN54TaT0E
+<http://webprotege.stanford.edu/R7PrkJQokJKieMcN54TaT0E> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> ;
+                                                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                    owl:onClass <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor>
+                                                                  ] ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactionMethod> <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Single-agent> ;
+                                                         rdfs:label "Single_Agent"@en .
+
+
+###  http://webprotege.stanford.edu/R7WivB5O3CgSGkUWI5zHduF
+<http://webprotege.stanford.edu/R7WivB5O3CgSGkUWI5zHduF> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Domain> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/domain> <http://webprotege.stanford.edu/R7WivB5O3CgSGkUWI5zHduF> ;
+                                                         rdfs:label "Privacy_Management"@en .
+
+
+###  http://webprotege.stanford.edu/R7aogVbO7lLktPAkTQUVdJH
+<http://webprotege.stanford.edu/R7aogVbO7lLktPAkTQUVdJH> rdf:type owl:NamedIndividual ,
+                                                                  <http://webprotege.stanford.edu/R8s5V56zgX2LzaYacaq4k4r> ;
+                                                         rdfs:label "UserStudy"@en .
+
+
+###  http://webprotege.stanford.edu/R7eiLLjAjPfi974CUL9aMoT
+<http://webprotege.stanford.edu/R7eiLLjAjPfi974CUL9aMoT> rdf:type owl:NamedIndividual ,
+                                                                  <http://webprotege.stanford.edu/R7N8xlW48mWQqtwfhpbr4P3> ;
+                                                         rdfs:label "FacialRecognitionSystem"@en .
+
+
+###  http://webprotege.stanford.edu/R7swN5LhTM69khGAOnY03pn
+<http://webprotege.stanford.edu/R7swN5LhTM69khGAOnY03pn> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> ;
+                                                                    owl:someValuesFrom <http://webprotege.stanford.edu/R7mArlFAsqWNLFwQ2vCiTnF>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> ;
+                                                                    owl:someValuesFrom <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration> ;
+                                                                    owl:someValuesFrom <http://webprotege.stanford.edu/Rzkf0AOFUz3fh8sPA0WpUA>
+                                                                  ] ;
+                                                         <http://webprotege.stanford.edu/RDz2FfIVCEqGm2E2j26hCfi> <http://webprotege.stanford.edu/R7eiLLjAjPfi974CUL9aMoT> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasInteraction> <http://webprotege.stanford.edu/RDHVgBqecoBlXFKvUsMFTPu> ;
+                                                         rdfs:label "Scenario_PrivacyViolation"@en .
+
+
+###  http://webprotege.stanford.edu/R84h9Bb0TuNDNEJghHNk29T
+<http://webprotege.stanford.edu/R84h9Bb0TuNDNEJghHNk29T> rdf:type owl:NamedIndividual ,
+                                                                  <http://webprotege.stanford.edu/R28UKpkU3djqDapS0PZmOg> ;
+                                                         rdfs:label "Bias_Mitigation"@en .
+
+
+###  http://webprotege.stanford.edu/R86BegvsfDHQigRLwfC1dr0
+<http://webprotege.stanford.edu/R86BegvsfDHQigRLwfC1dr0> rdf:type owl:NamedIndividual ,
+                                                                  <http://webprotege.stanford.edu/RCUnyALP3vdjgbyXAktIoiv> ;
+                                                         rdfs:label "Unsupervised_Learning"@en .
+
+
+###  http://webprotege.stanford.edu/R880dNPsEsv3HpLT4TB86wh
+<http://webprotege.stanford.edu/R880dNPsEsv3HpLT4TB86wh> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration> ;
+                                                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                    owl:onClass <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/EthicalConsideration>
+                                                                  ] ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/domain> <http://webprotege.stanford.edu/R7WivB5O3CgSGkUWI5zHduF> ;
+                                                         rdfs:label "Privacy_Auctioning_Learning_Agent"@en .
+
+
+###  http://webprotege.stanford.edu/R8IHt3CvDHikYNL3A5kSo7s
+<http://webprotege.stanford.edu/R8IHt3CvDHikYNL3A5kSo7s> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ;
+                                                         <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> <http://webprotege.stanford.edu/RBfIVnzhkOrDVgVWUTBhm0> ;
+                                                         <http://webprotege.stanford.edu/RDz2FfIVCEqGm2E2j26hCfi> <http://webprotege.stanford.edu/R8sDBic9BdVEMNIRlYUx2f5> ,
+                                                                                                                  <http://webprotege.stanford.edu/R9t3OSvVyo0NOuO5qrUEjF2> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/capability> <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Transparency> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasInteraction> <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Question-Answering> ;
+                                                         rdfs:label "Scenario_QA_Assistance"@en .
+
+
+###  http://webprotege.stanford.edu/R8PtgDIh3PhF7UVyyhlTnpW
+<http://webprotege.stanford.edu/R8PtgDIh3PhF7UVyyhlTnpW> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> ;
+                                                                    owl:someValuesFrom <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration> ;
+                                                                    owl:someValuesFrom <http://webprotege.stanford.edu/RC8driYRv5AOPWH4Lt3ko6D>
+                                                                  ] ;
+                                                         <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> :HumanAgent1 ;
+                                                         <http://webprotege.stanford.edu/RDz2FfIVCEqGm2E2j26hCfi> <http://webprotege.stanford.edu/R8sDBic9BdVEMNIRlYUx2f5> ,
+                                                                                                                  <http://webprotege.stanford.edu/RXkgCia5v1alxR8D7bBem3> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration> <http://webprotege.stanford.edu/R7WivB5O3CgSGkUWI5zHduF> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/processingTask> <http://webprotege.stanford.edu/R9r0qnKRlabyp5CxFs8ePqw> ;
+                                                         rdfs:label "Scenario_TrustCalibration"@en .
+
+
+###  http://webprotege.stanford.edu/R8ZnaDFdOTdKufmfLcz3s9v
+<http://webprotege.stanford.edu/R8ZnaDFdOTdKufmfLcz3s9v> rdf:type owl:NamedIndividual ,
+                                                                  <http://webprotege.stanford.edu/R8s5V56zgX2LzaYacaq4k4r> ;
+                                                         rdfs:label "Survey"@en .
+
+
+###  http://webprotege.stanford.edu/R8ioe0NMfCHKtAGKnwBp7QP
+<http://webprotege.stanford.edu/R8ioe0NMfCHKtAGKnwBp7QP> rdf:type owl:NamedIndividual .
+
+
+###  http://webprotege.stanford.edu/R8pODHdGx4cCThGuktlpxJ7
+<http://webprotege.stanford.edu/R8pODHdGx4cCThGuktlpxJ7> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> ;
+                                                                    owl:someValuesFrom <http://webprotege.stanford.edu/R7mArlFAsqWNLFwQ2vCiTnF>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration> ;
+                                                                    owl:someValuesFrom <http://webprotege.stanford.edu/RC8driYRv5AOPWH4Lt3ko6D>
+                                                                  ] ;
+                                                         <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> <http://webprotege.stanford.edu/R9FwArVzRxw5YJoz4LFUrij> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasInteraction> <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Recommendation> ;
+                                                         rdfs:label "Scenario_AIRecommendation"@en .
+
+
+###  http://webprotege.stanford.edu/R8sDBic9BdVEMNIRlYUx2f5
+<http://webprotege.stanford.edu/R8sDBic9BdVEMNIRlYUx2f5> rdf:type owl:NamedIndividual ,
+                                                                  <http://webprotege.stanford.edu/RCUnyALP3vdjgbyXAktIoiv> ;
+                                                         rdfs:label "Supervised_Learning"@en .
+
+
+###  http://webprotege.stanford.edu/R8tCYvzUcOztUf65XaBnqfq
+<http://webprotege.stanford.edu/R8tCYvzUcOztUf65XaBnqfq> rdf:type owl:NamedIndividual ,
+                                                                  <http://webprotege.stanford.edu/R974KWLHbQiSe4BiDbpTZif> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/capability> <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Communication> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactionMethod> <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Collaboration-based> ;
+                                                         rdfs:label "Collaborative_Based_Agent"@en .
+
+
+###  http://webprotege.stanford.edu/R91Pph0Dqc1HCH0hrei6FBT
+<http://webprotege.stanford.edu/R91Pph0Dqc1HCH0hrei6FBT> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration> ;
+                                                                    owl:someValuesFrom <http://webprotege.stanford.edu/RC8driYRv5AOPWH4Lt3ko6D>
+                                                                  ] ;
+                                                         <http://webprotege.stanford.edu/RDz2FfIVCEqGm2E2j26hCfi> <http://webprotege.stanford.edu/RCmcHzgTbJTbHVGORMHMnTE> ,
+                                                                                                                  <http://webprotege.stanford.edu/RXkgCia5v1alxR8D7bBem3> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration> <http://webprotege.stanford.edu/R7WivB5O3CgSGkUWI5zHduF> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasInteraction> <http://webprotege.stanford.edu/RBOK9DXNKxbNl0qvLKpio6o> ,
+                                                                                                                                                   <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Question-Answering> ,
+                                                                                                                                                   <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Recommendation> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/inScenario> <http://webprotege.stanford.edu/Rt8aWJ1SH2RxB3efTPphXw> ,
+                                                                                                                                               <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/RealTimeResponse> ;
+                                                         rdfs:label "Scenario_EmergencyResponse"@en .
+
+
+###  http://webprotege.stanford.edu/R93B7YvBIhZbqOPUDRfrrup
+<http://webprotege.stanford.edu/R93B7YvBIhZbqOPUDRfrrup> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent> ;
+                                                         rdfs:label "ChatBot"@en .
+
+
+###  http://webprotege.stanford.edu/R96zg06ozYmrGBo01CICCqx
+<http://webprotege.stanford.edu/R96zg06ozYmrGBo01CICCqx> rdf:type owl:NamedIndividual ,
+                                                                  <http://webprotege.stanford.edu/R28UKpkU3djqDapS0PZmOg> ;
+                                                         rdfs:label "Discrimination_Mitigation"@en .
+
+
+###  http://webprotege.stanford.edu/R9FwArVzRxw5YJoz4LFUrij
+<http://webprotege.stanford.edu/R9FwArVzRxw5YJoz4LFUrij> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent> ;
+                                                         rdfs:label "AI_Recommendation_System"@en .
+
+
+###  http://webprotege.stanford.edu/R9IIyaf3QRJhWVuIc61BcsN
+<http://webprotege.stanford.edu/R9IIyaf3QRJhWVuIc61BcsN> rdf:type owl:NamedIndividual ,
+                                                                  <http://webprotege.stanford.edu/R9sxOvsZvyQbMSKTY9pFseo> ;
+                                                         rdfs:label "PreferenceForSustainableProducts"@en .
+
+
+###  http://webprotege.stanford.edu/R9LHrVVqSzLN7u8uyNxuqOP
+<http://webprotege.stanford.edu/R9LHrVVqSzLN7u8uyNxuqOP> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask> ;
+                                                         rdfs:label "Habit_Creation "@en .
+
+
+###  http://webprotege.stanford.edu/R9Ni6xIH3joSQ4N2X95nDTV
+<http://webprotege.stanford.edu/R9Ni6xIH3joSQ4N2X95nDTV> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration> ;
+                                                                    owl:someValuesFrom <http://webprotege.stanford.edu/RC8driYRv5AOPWH4Lt3ko6D>
+                                                                  ] ;
+                                                         <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> <http://webprotege.stanford.edu/RBfIVnzhkOrDVgVWUTBhm0> ;
+                                                         <http://webprotege.stanford.edu/RBYGcEdiqSGFoa8wQOU6mK1> <http://webprotege.stanford.edu/R4MKmIsAkyWIwBuSOAtZN6> ;
+                                                         <http://webprotege.stanford.edu/RDz2FfIVCEqGm2E2j26hCfi> <http://webprotege.stanford.edu/R9t3OSvVyo0NOuO5qrUEjF2> ,
+                                                                                                                  <http://webprotege.stanford.edu/RXkgCia5v1alxR8D7bBem3> ;
+                                                         rdfs:label "Scenario_TutorSimulation"@en .
+
+
+###  http://webprotege.stanford.edu/R9YluEOzbmPpV9ZuULC4TAN
+<http://webprotege.stanford.edu/R9YluEOzbmPpV9ZuULC4TAN> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ;
+                                                         <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> <http://webprotege.stanford.edu/R880dNPsEsv3HpLT4TB86wh> ,
+                                                                                                                  :HumanAgent1 ;
+                                                         <http://webprotege.stanford.edu/RDz2FfIVCEqGm2E2j26hCfi> <http://webprotege.stanford.edu/R9t3OSvVyo0NOuO5qrUEjF2> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration> <http://webprotege.stanford.edu/R7WivB5O3CgSGkUWI5zHduF> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasInteraction> :Negotiation ,
+                                                                                                                                                   <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Recommendation> ;
+                                                         rdfs:label "Scenario_PrivacyConflictResolution"@en .
+
+
+###  http://webprotege.stanford.edu/R9r0qnKRlabyp5CxFs8ePqw
+<http://webprotege.stanford.edu/R9r0qnKRlabyp5CxFs8ePqw> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask> ;
+                                                         rdfs:label "Trust_Adjustment"@en .
+
+
+###  http://webprotege.stanford.edu/R9t3OSvVyo0NOuO5qrUEjF2
+<http://webprotege.stanford.edu/R9t3OSvVyo0NOuO5qrUEjF2> rdf:type owl:NamedIndividual ,
+                                                                  <http://webprotege.stanford.edu/RCUnyALP3vdjgbyXAktIoiv> ;
+                                                         rdfs:label "Reinforcement_Learning"@en .
+
+
+###  http://webprotege.stanford.edu/RBOK9DXNKxbNl0qvLKpio6o
+<http://webprotege.stanford.edu/RBOK9DXNKxbNl0qvLKpio6o> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionTask> ;
+                                                         rdfs:label "Prediction"@en .
+
+
+###  http://webprotege.stanford.edu/RBfIVnzhkOrDVgVWUTBhm0
+<http://webprotege.stanford.edu/RBfIVnzhkOrDVgVWUTBhm0> rdf:type owl:NamedIndividual ;
+                                                        rdfs:label "AI_Tutor"@en .
+
+
+###  http://webprotege.stanford.edu/RBt3f14U17YzpMxE3DHS3uy
+<http://webprotege.stanford.edu/RBt3f14U17YzpMxE3DHS3uy> rdf:type owl:NamedIndividual ,
+                                                                  <http://webprotege.stanford.edu/RCUnyALP3vdjgbyXAktIoiv> ;
+                                                         rdfs:label "Deep_Learning"@en .
+
+
+###  http://webprotege.stanford.edu/RC2THaAbdHdUSl23VQ9PMKt
+<http://webprotege.stanford.edu/RC2THaAbdHdUSl23VQ9PMKt> rdf:type owl:NamedIndividual ,
+                                                                  <http://webprotege.stanford.edu/RBX0CDoPfZ2tYtGHbrKSqj2> ;
+                                                         rdfs:label "EthicalProduct"@en .
+
+
+###  http://webprotege.stanford.edu/RCUJ2B11iG4tLxa4irOQRI6
+<http://webprotege.stanford.edu/RCUJ2B11iG4tLxa4irOQRI6> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask> ;
+                                                         rdfs:label "Image_Classification"@en .
+
+
+###  http://webprotege.stanford.edu/RCUu5uXDUcNPBd951uaas4w
+<http://webprotege.stanford.edu/RCUu5uXDUcNPBd951uaas4w> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask> ;
+                                                         rdfs:label "Confidence_Based_Recommendation"@en .
+
+
+###  http://webprotege.stanford.edu/RCaMvIq2syKarhWvzLItJtQ
+<http://webprotege.stanford.edu/RCaMvIq2syKarhWvzLItJtQ> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration> ;
+                                                                    owl:someValuesFrom <http://webprotege.stanford.edu/RC8driYRv5AOPWH4Lt3ko6D>
+                                                                  ] ;
+                                                         <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> <http://webprotege.stanford.edu/R93B7YvBIhZbqOPUDRfrrup> ,
+                                                                                                                  :HumanAgent1 ;
+                                                         <http://webprotege.stanford.edu/RDz2FfIVCEqGm2E2j26hCfi> <http://webprotege.stanford.edu/R9t3OSvVyo0NOuO5qrUEjF2> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasInteraction> <http://webprotege.stanford.edu/RffOEeILbj4PpBCctqbd4B> ;
+                                                         rdfs:label "Scenario_StressReduction"@en .
+
+
+###  http://webprotege.stanford.edu/RCmcHzgTbJTbHVGORMHMnTE
+<http://webprotege.stanford.edu/RCmcHzgTbJTbHVGORMHMnTE> rdf:type owl:NamedIndividual ,
+                                                                  <http://webprotege.stanford.edu/R7N8xlW48mWQqtwfhpbr4P3> ;
+                                                         rdfs:label "SituationalAwarenessComponent"@en .
+
+
+###  http://webprotege.stanford.edu/RD0vh4COmsHA9k7dp2aZ4m8
+<http://webprotege.stanford.edu/RD0vh4COmsHA9k7dp2aZ4m8> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask> ;
+                                                         rdfs:label "AI_Distrust_Assessment"@en .
+
+
+###  http://webprotege.stanford.edu/RDBbXnd65FnL3c9m7j5w5yF
+<http://webprotege.stanford.edu/RDBbXnd65FnL3c9m7j5w5yF> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> ;
+                                                                    owl:someValuesFrom <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration> ;
+                                                                    owl:someValuesFrom <http://webprotege.stanford.edu/RC8driYRv5AOPWH4Lt3ko6D>
+                                                                  ] ;
+                                                         <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> :HumanAgent1 ;
+                                                         <http://webprotege.stanford.edu/RDz2FfIVCEqGm2E2j26hCfi> <http://webprotege.stanford.edu/R8sDBic9BdVEMNIRlYUx2f5> ,
+                                                                                                                  <http://webprotege.stanford.edu/RXkgCia5v1alxR8D7bBem3> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasInteraction> <http://webprotege.stanford.edu/RCUJ2B11iG4tLxa4irOQRI6> ;
+                                                         rdfs:label "Scenario_AIImageClassification"@en .
+
+
+###  http://webprotege.stanford.edu/RDEcnEWlY2ZLpMfUmaSHRSC
+<http://webprotege.stanford.edu/RDEcnEWlY2ZLpMfUmaSHRSC> rdf:type owl:NamedIndividual ,
+                                                                  <http://webprotege.stanford.edu/RCUnyALP3vdjgbyXAktIoiv> ;
+                                                         rdfs:label "Semi_Supervised_Learning"@en .
+
+
+###  http://webprotege.stanford.edu/RDHVgBqecoBlXFKvUsMFTPu
+<http://webprotege.stanford.edu/RDHVgBqecoBlXFKvUsMFTPu> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Interaction> ;
+                                                         rdfs:label "DataCollection"@en .
+
+
+###  http://webprotege.stanford.edu/RDcjNPbWt1bOdG6SLzh9UiZ
+<http://webprotege.stanford.edu/RDcjNPbWt1bOdG6SLzh9UiZ> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent> ;
+                                                         <http://webprotege.stanford.edu/RDz2FfIVCEqGm2E2j26hCfi> <http://webprotege.stanford.edu/RXkgCia5v1alxR8D7bBem3> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/informationMethod> <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Symbolic> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactionMethod> <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Neuro-symbolic> ;
+                                                         rdfs:label "Neuro_Symbolic_Agent"@en .
+
+
+###  http://webprotege.stanford.edu/RDlZ99er5HWh5NUCG0dB5nk
+<http://webprotege.stanford.edu/RDlZ99er5HWh5NUCG0dB5nk> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ;
+                                                         <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> <http://webprotege.stanford.edu/R93B7YvBIhZbqOPUDRfrrup> ,
+                                                                                                                  :HumanAgent1 ;
+                                                         <http://webprotege.stanford.edu/RDz2FfIVCEqGm2E2j26hCfi> <http://webprotege.stanford.edu/R8sDBic9BdVEMNIRlYUx2f5> ,
+                                                                                                                  <http://webprotege.stanford.edu/RXkgCia5v1alxR8D7bBem3> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration> <http://webprotege.stanford.edu/R7WivB5O3CgSGkUWI5zHduF> ;
+                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasInteraction> <http://webprotege.stanford.edu/R9LHrVVqSzLN7u8uyNxuqOP> ;
+                                                         rdfs:label "Scenario_HabitFormation"@en .
+
+
+###  http://webprotege.stanford.edu/RDy1UJTgmMoXOfcaK2dqVm
+<http://webprotege.stanford.edu/RDy1UJTgmMoXOfcaK2dqVm> rdf:type owl:NamedIndividual ,
+                                                                 <http://webprotege.stanford.edu/RCTj2GYfzj9eiGHTj3Bx2gN> ;
+                                                        rdfs:label "Rule_Based"@en .
+
+
+###  http://webprotege.stanford.edu/RFey7NG0fEaPrGHufx0eEF
+<http://webprotege.stanford.edu/RFey7NG0fEaPrGHufx0eEF> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent> ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> ;
+                                                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                   owl:onClass <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor>
+                                                                 ] ;
+                                                        <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactionMethod> <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Non-cooperative> ;
+                                                        rdfs:label "NonCooperative_Agent"@en .
+
+
+###  http://webprotege.stanford.edu/RPSoaHSbGGsuw22TOl3Qd0
+<http://webprotege.stanford.edu/RPSoaHSbGGsuw22TOl3Qd0> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> ;
+                                                                   owl:someValuesFrom <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration> ;
+                                                                   owl:someValuesFrom <http://webprotege.stanford.edu/RC8driYRv5AOPWH4Lt3ko6D>
+                                                                 ] ;
+                                                        <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> :HumanAgent1 ;
+                                                        <http://webprotege.stanford.edu/RDz2FfIVCEqGm2E2j26hCfi> <http://webprotege.stanford.edu/R9t3OSvVyo0NOuO5qrUEjF2> ,
+                                                                                                                 <http://webprotege.stanford.edu/RXkgCia5v1alxR8D7bBem3> ;
+                                                        <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration> <http://webprotege.stanford.edu/R7WivB5O3CgSGkUWI5zHduF> ;
+                                                        <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactionTask> <http://webprotege.stanford.edu/RCUu5uXDUcNPBd951uaas4w> ;
+                                                        rdfs:label "Scenario_AIDecisionSupport"@en .
+
+
+###  http://webprotege.stanford.edu/RWXyXG4krYAJHhwLMXuE3q
+<http://webprotege.stanford.edu/RWXyXG4krYAJHhwLMXuE3q> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent> ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/processingInformation> ;
+                                                                   owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                   owl:onClass <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InformationProcessing>
+                                                                 ] ;
+                                                        <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/interactionMethod> <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Multimodal> ;
+                                                        rdfs:label "MultiModal_Agent"@en .
+
+
+###  http://webprotege.stanford.edu/RXkgCia5v1alxR8D7bBem3
+<http://webprotege.stanford.edu/RXkgCia5v1alxR8D7bBem3> rdf:type owl:NamedIndividual ,
+                                                                 <http://webprotege.stanford.edu/RCTj2GYfzj9eiGHTj3Bx2gN> ;
+                                                        rdfs:label "Neural_Network"@en .
+
+
+###  http://webprotege.stanford.edu/RboY5ZW5CXpHWZcnfog9bz
+<http://webprotege.stanford.edu/RboY5ZW5CXpHWZcnfog9bz> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration> ;
+                                                                   owl:someValuesFrom <http://webprotege.stanford.edu/RC8driYRv5AOPWH4Lt3ko6D>
+                                                                 ] ;
+                                                        <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> <http://webprotege.stanford.edu/R7L3KLrm8cLtFdMAA89UmTk> ,
+                                                                                                                 :HumanAgent1 ;
+                                                        <http://webprotege.stanford.edu/RDz2FfIVCEqGm2E2j26hCfi> <http://webprotege.stanford.edu/R86BegvsfDHQigRLwfC1dr0> ,
+                                                                                                                 <http://webprotege.stanford.edu/R8sDBic9BdVEMNIRlYUx2f5> ;
+                                                        <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasEthicalConsideration> <http://webprotege.stanford.edu/R7WivB5O3CgSGkUWI5zHduF> ;
+                                                        <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasInteraction> <http://webprotege.stanford.edu/RBOK9DXNKxbNl0qvLKpio6o> ,
+                                                                                                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Question-Answering> ;
+                                                        rdfs:label "Scenario_PrivacyDecisionOptimization"@en .
+
+
+###  http://webprotege.stanford.edu/RcBYlApBcbGhmcXc0b6LTz
+<http://webprotege.stanford.edu/RcBYlApBcbGhmcXc0b6LTz> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionMethod> ;
+                                                        rdfs:label "Multi-agent"@en .
+
+
+###  http://webprotege.stanford.edu/RebnghGk4j45zEi40Aw09C
+<http://webprotege.stanford.edu/RebnghGk4j45zEi40Aw09C> rdf:type owl:NamedIndividual ,
+                                                                 <http://webprotege.stanford.edu/RCTj2GYfzj9eiGHTj3Bx2gN> ;
+                                                        rdfs:label "MDP"@en .
+
+
+###  http://webprotege.stanford.edu/RffOEeILbj4PpBCctqbd4B
+<http://webprotege.stanford.edu/RffOEeILbj4PpBCctqbd4B> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask> ;
+                                                        rdfs:label "Mindfulness_Intervention"@en .
+
+
+###  http://webprotege.stanford.edu/RgqRTXBBw9mLV0vX2BzQBs
+<http://webprotege.stanford.edu/RgqRTXBBw9mLV0vX2BzQBs> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Scenario> ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> ;
+                                                                   owl:someValuesFrom <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent>
+                                                                 ] ;
+                                                        <http://webprotege.stanford.edu/R9WgEN4qpLkvWgswO8jPyWR> :HumanAgent1 ;
+                                                        <http://webprotege.stanford.edu/RDz2FfIVCEqGm2E2j26hCfi> <http://webprotege.stanford.edu/R9t3OSvVyo0NOuO5qrUEjF2> ,
+                                                                                                                 <http://webprotege.stanford.edu/RXkgCia5v1alxR8D7bBem3> ;
+                                                        <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/capability> <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Transparency> ;
+                                                        <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/processingTask> <http://webprotege.stanford.edu/RD0vh4COmsHA9k7dp2aZ4m8> ;
+                                                        rdfs:label "Scenario_AI_Distrust"@en .
+
+
+###  http://webprotege.stanford.edu/Rh0LMNrw7IO0r7eUiJy2X2
+<http://webprotege.stanford.edu/Rh0LMNrw7IO0r7eUiJy2X2> rdf:type owl:NamedIndividual ,
+                                                                 <http://webprotege.stanford.edu/RCTj2GYfzj9eiGHTj3Bx2gN> ;
+                                                        rdfs:label "Decision_Tree"@en .
+
+
+###  http://webprotege.stanford.edu/Rt8aWJ1SH2RxB3efTPphXw
+<http://webprotege.stanford.edu/Rt8aWJ1SH2RxB3efTPphXw> rdf:type owl:NamedIndividual ,
+                                                                 <http://webprotege.stanford.edu/R8s5V56zgX2LzaYacaq4k4r> ;
+                                                        rdfs:label "Observation"@en .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51#ArtificialAgent1
+:ArtificialAgent1 rdf:type owl:NamedIndividual ,
+                           <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51#HumanAgent1
+:HumanAgent1 rdf:type owl:NamedIndividual ,
+                      <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Human> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51#Negotiation
+:Negotiation rdf:type owl:NamedIndividual ,
+                      <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SocialAction> ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :influences ;
+                        owl:maxQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                        owl:onClass <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor>
+                      ] .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51#imageProcessing
+:imageProcessing rdf:type owl:NamedIndividual ,
+                          <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InformationProcessing> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51#speechRecognition
+:speechRecognition rdf:type owl:NamedIndividual ,
+                            <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InformationProcessing> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51#textUnderstanding
+:textUnderstanding rdf:type owl:NamedIndividual ,
+                            <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InformationProcessing> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Adaptiveness
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Adaptiveness> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Capability> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Adult
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Adult> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Human> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Asymmetrical_Dependence
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Asymmetrical_Dependence> rdf:type owl:NamedIndividual ,
+                                                                                                            <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/DependenceRelation> ;
+                                                                                                   rdfs:comment "one agent is significantly more dependent on the other" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/BDI
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/BDI> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Capability> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Bilateral_Coordination
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Bilateral_Coordination> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AnticipatoryCoordination> ,
+                                                                                                           <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/PositiveCoordination> ;
+                                                                                                  rdfs:comment "both agents adjust actions for mutual benefit" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Bilateral_Delegation
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Bilateral_Delegation> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Delegation> ;
+                                                                                                rdfs:comment "Both agents negotiate and agree on a delegated task" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Child
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Child> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Human> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Clarification
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Clarification> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/CommunicationAction> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Close_Delegation
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Close_Delegation> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Delegation> ;
+                                                                                            rdfs:comment "The delegating agent specifies a strict procedure to follow." .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Coercive_Action
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Coercive_Action> rdf:type owl:NamedIndividual ,
+                                                                                                    <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InfluencingAction> ;
+                                                                                           rdfs:comment "an agent applies power to force compliance." .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Collaboration-based
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Collaboration-based> rdf:type owl:NamedIndividual ,
+                                                                                                        <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionMethod> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Collaborative_Coordination
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Collaborative_Coordination> rdf:type owl:NamedIndividual ,
+                                                                                                               <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AnticipatoryCoordination> ,
+                                                                                                               <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/PositiveCoordination> ,
+                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                 owl:onProperty :coordinatesWith ;
+                                                                                                                 owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                                                                 owl:onClass <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Actor>
+                                                                                                               ] ;
+                                                                                                      rdfs:comment "an agent actively helps another achieve their goal." .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Collaborativeness
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Collaborativeness> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Capability> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Communication
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Communication> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Capability> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ConflictAvoidance
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ConflictAvoidance> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/NegativeCoordination> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Contribution-based
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Contribution-based> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionMethod> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/CooperativeOptimization
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/CooperativeOptimization> rdf:type owl:NamedIndividual ,
+                                                                                                            <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/PositiveCoordination> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Deceptive_Action
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Deceptive_Action> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InfluencingAction> ;
+                                                                                            rdfs:comment "an agent misleads another to achieve an influence goal" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Designer
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Designer> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Human> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/DirectIntervention
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/DirectIntervention> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/StrongSocialAction> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Economic_Power
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Economic_Power> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/PowerRelation> ;
+                                                                                          rdfs:comment "an agent influences others via resource control." .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ExpectationDrivenAction
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ExpectationDrivenAction> rdf:type owl:NamedIndividual ,
+                                                                                                            <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AnticipatoryCoordination> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Explainability
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Explainability> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionTask> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ForecastedAdjustment
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ForecastedAdjustment> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AnticipatoryCoordination> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Generating
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Generating> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/GoalAlignment
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/GoalAlignment> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/GoalAdoption> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Harmonization
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Harmonization> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/NegativeCoordination> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Hierarchical_Power
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Hierarchical_Power> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/PowerRelation> ;
+                                                                                              rdfs:comment "an agent has formal authority over another." .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Hybrid
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Hybrid> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingMethod> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ImplicitExpectation
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ImplicitExpectation> rdf:type owl:NamedIndividual ,
+                                                                                                        <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/WeakSocialAction> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Incentivizing_Action
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Incentivizing_Action> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InfluencingAction> ;
+                                                                                                rdfs:comment "an agent offers rewards to influence another" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InstantAdjustment
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InstantAdjustment> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ReactiveCoordination> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Instruction
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Instruction> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/CommunicationAction> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Intelligent_System
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Intelligent_System> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/IntentAdoption
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/IntentAdoption> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/GoalAdoption> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/IntentionalGuidance
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/IntentionalGuidance> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InterferenceMinimization
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InterferenceMinimization> rdf:type owl:NamedIndividual ,
+                                                                                                             <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/NegativeCoordination> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Knowledge_Power
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Knowledge_Power> rdf:type owl:NamedIndividual ,
+                                                                                                    <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/PowerRelation> ;
+                                                                                           rdfs:comment "an agent influences others by controlling information" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Learning
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Learning> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Multimodal
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Multimodal> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionMethod> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/MutualBenefitAlignment
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/MutualBenefitAlignment> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/PositiveCoordination> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Mutual_Dependence
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Mutual_Dependence> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/DependenceRelation> ;
+                                                                                             rdfs:comment "two agents depend on each other for achieving the same goal" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Neuro-symbolic
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Neuro-symbolic> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingMethod> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Non-cooperative
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Non-cooperative> rdf:type owl:NamedIndividual ,
+                                                                                                    <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionMethod> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Normative_Commitment
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Normative_Commitment> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SocialCommitment> ;
+                                                                                                rdfs:comment "social norms dictate commitment" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Obligation_Commitment
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Obligation_Commitment> rdf:type owl:NamedIndividual ,
+                                                                                                          <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SocialCommitment> ;
+                                                                                                 rdfs:comment "agent is bound to perform an action for another" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Open_Delegation
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Open_Delegation> rdf:type owl:NamedIndividual ,
+                                                                                                    <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Delegation> ;
+                                                                                           rdfs:comment "The receiving agent has autonomy to decide how to achieve the goal" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper1
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper1> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper> ;
+                                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/describesScenario> <http://webprotege.stanford.edu/R7swN5LhTM69khGAOnY03pn> ,
+                                                                                                                                                                               <http://webprotege.stanford.edu/R8pODHdGx4cCThGuktlpxJ7> ;
+                                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasTitle> "Ethical preferences in the digital world: the exosoul questionnaire" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper2
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper2> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper> ;
+                                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/describesScenario> <http://webprotege.stanford.edu/R91Pph0Dqc1HCH0hrei6FBT> ;
+                                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasTitle> "Adopting ai to support situational awareness in emergency response: a reflection by professionals" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper3
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper3> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper> ;
+                                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/describesScenario> <http://webprotege.stanford.edu/R8IHt3CvDHikYNL3A5kSo7s> ,
+                                                                                                                                                                               <http://webprotege.stanford.edu/R9YluEOzbmPpV9ZuULC4TAN> ;
+                                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasTitle> "Assisting Users in Privacy Conflicts with Partially Observable Multi-Agent Reinforcement Learning" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper4
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper4> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper> ;
+                                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/describesScenario> <http://webprotege.stanford.edu/RCaMvIq2syKarhWvzLItJtQ> ,
+                                                                                                                                                                               <http://webprotege.stanford.edu/RDlZ99er5HWh5NUCG0dB5nk> ;
+                                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasTitle> "Virtual support for real-world movement: Using chatbots to overcome barriers to physical activity" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper5
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper5> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper> ;
+                                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/describesScenario> <http://webprotege.stanford.edu/RDBbXnd65FnL3c9m7j5w5yF> ,
+                                                                                                                                                                               <http://webprotege.stanford.edu/RPSoaHSbGGsuw22TOl3Qd0> ;
+                                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasTitle> "An Empirical Investigation of Reliance on AI-Assistance in a Noisy-Image Classification Task" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper6
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper6> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper> ;
+                                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/describesScenario> <http://webprotege.stanford.edu/R8PtgDIh3PhF7UVyyhlTnpW> ,
+                                                                                                                                                                               <http://webprotege.stanford.edu/RgqRTXBBw9mLV0vX2BzQBs> ;
+                                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasTitle> "To trust or distrust trust measures: Validating questionnaires for trust in ai" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper7
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper7> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Paper> ;
+                                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/describesScenario> <http://webprotege.stanford.edu/R9Ni6xIH3joSQ4N2X95nDTV> ;
+                                                                                  <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/hasTitle> "Training Intelligent Tutors on User Simulators Using Reinforcement Learning" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/PassiveAdaptation
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/PassiveAdaptation> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/WeakSocialAction> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Persuasion
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Persuasion> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InfluencingAction> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Persuasive_Action
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Persuasive_Action> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InfluencingAction> ;
+                                                                                             rdfs:comment "an agent uses argumentation to influence another" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/PredictiveAdjustment
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/PredictiveAdjustment> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/WeakSocialAction> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProactiveAssistance
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProactiveAssistance> rdf:type owl:NamedIndividual ,
+                                                                                                        <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/StrongSocialAction> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Question-Answering
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Question-Answering> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionTask> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/RealTimeResponse
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/RealTimeResponse> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ReactiveCoordination> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Reasoning
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Reasoning> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Reciprocal_Commitment
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Reciprocal_Commitment> rdf:type owl:NamedIndividual ,
+                                                                                                          <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SocialCommitment> ;
+                                                                                                 rdfs:comment "two agents commit to supporting each other" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Reciprocal_Dependence
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Reciprocal_Dependence> rdf:type owl:NamedIndividual ,
+                                                                                                          <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/DependenceRelation> ;
+                                                                                                 rdfs:comment "two agents depend on each other but for different goals" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Recommendation
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Recommendation> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InfluencingAction> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Resource_Dependence
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Resource_Dependence> rdf:type owl:NamedIndividual ,
+                                                                                                        <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/DependenceRelation> ;
+                                                                                               rdfs:comment "an agent depends on another for access to resources" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Responsibility
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Responsibility> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Capability> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ResponsibilityTransfer
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ResponsibilityTransfer> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Delegation> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Robot
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Robot> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ArtificialAgent> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Selfish_Coordination
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Selfish_Coordination> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/NegativeCoordination> ,
+                                                                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ReactiveCoordination> ;
+                                                                                                rdfs:comment "an agent optimizes only its own success" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SharedObjective
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SharedObjective> rdf:type owl:NamedIndividual ,
+                                                                                                    <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/GoalAdoption> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Single-agent
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Single-agent> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InteractionMethod> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SituationalAdaptation
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SituationalAdaptation> rdf:type owl:NamedIndividual ,
+                                                                                                          <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ReactiveCoordination> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Situational_Power
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Situational_Power> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/PowerRelation> ;
+                                                                                             rdfs:comment "power is context-dependent" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Statistical
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Statistical> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingMethod> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/StrategicPlanning
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/StrategicPlanning> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/AnticipatoryCoordination> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Suggestion
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Suggestion> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/InfluencingAction> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Symbolic
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Symbolic> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingMethod> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SynergisticAction
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/SynergisticAction> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/PositiveCoordination> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/TaskAssignment
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/TaskAssignment> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Delegation> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Task_Dependence
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Task_Dependence> rdf:type owl:NamedIndividual ,
+                                                                                                    <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/DependenceRelation> ;
+                                                                                           rdfs:comment "an agent depends on another for executing a task" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Teacher
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Teacher> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Human> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Transforming
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Transforming> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ProcessingTask> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Transparency
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Transparency> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Capability> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Unilateral_Coordination
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Unilateral_Coordination> rdf:type owl:NamedIndividual ,
+                                                                                                            <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/NegativeCoordination> ,
+                                                                                                            <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/ReactiveCoordination> ;
+                                                                                                   rdfs:comment "only one agent adjusts actions based on another." .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Unilateral_Delegation
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Unilateral_Delegation> rdf:type owl:NamedIndividual ,
+                                                                                                          <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Delegation> ;
+                                                                                                 rdfs:comment "One agent delegates a task without input from the other" .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Warning
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Warning> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/CommunicationAction> .
+
+
+###  http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/WorkloadDistribution
+<http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/WorkloadDistribution> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/vbr240/ontologies/2022/4/untitled-ontology-51/Delegation> .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
