@@ -10,3 +10,7 @@ This folder serves as a repository for our ontology and the analyses conducted f
 
 ### In the FinalOntology Folder:
 This folder contains our enhanced ontology, including all additional classes, relationships, and instances.
+
+### In FinalCombine_graph
+There is the final onotlogy used in the Assigment =  combining our original version with the one provided in the course for the final assignment
+
