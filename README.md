@@ -1,16 +1,21 @@
-# KG
-This folder serves as a repository for our ontology and the analyses conducted for the Knowledge Graph and Semantic Representation course.
+# Hybrid Intelligence Ontology Project
 
-### In the ReportAnalysis File:
-- Comparative analysis between our ontology and the merge_ontology provided in class
-- Development of a final ontology, combining our original version with the one provided in the course for the final assignment
-- SPARQL queries designed to better understand the data in the final ontology
-- Knowledge Graph metrics computed on the final ontology
-- Link prediction experiments conducted on the final ontology
+This repository contains our work for the *Knowledge Graphs and Semantic Technologies* course, focused on ontology engineering, reasoning, and data analysis for Hybrid Intelligence systems.
 
-### In the FinalOntology Folder:
-This folder contains our enhanced ontology, including all additional classes, relationships, and instances.
+## 📁 `ReportAnalysis/`
 
-### In FinalCombine_graph
-There is the final onotlogy used in the Assigment =  combining our original version with the one provided in the course for the final assignment
+This folder includes the main analysis conducted throughout the project:
 
+- 📊 **Comparative analysis** between our original ontology and the `merge_ontology` provided in the course.
+- 🔗 **Final merged ontology** combining our model with the class-provided ontology for the final assignment.
+- 🔍 **SPARQL queries** used to explore, audit, and validate the semantic structure of the final ontology.
+- 📈 **Graph metrics** (e.g., node/edge counts, class/property distributions) computed to assess the structural richness of the ontology.
+- 🤖 **Link prediction experiments** using knowledge graph embeddings (ComplEx) to assess semantic completeness and suggest new triples.
+
+## 📁 `FinalOntology/`
+
+Contains our fully developed ontology, including all newly introduced classes, relationships, and individuals. This version represents our extended conceptual model for representing socio-technical and ethical dimensions in Hybrid Intelligence.
+
+## 📁 `FinalCombine_graph/`
+
+Contains the final ontology submitted for the assignment, combining our original version with the ontology provided in class.
