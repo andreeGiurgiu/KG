@@ -4,7 +4,7 @@ This repository contains our work for the *Knowledge Graphs and Semantic Technol
 
 ## 📁 `ReportAnalysis/`
 
-This folder includes the main analysis conducted throughout the project:
+This notebook includes the main analysis conducted throughout the project:
 
 - 📊 **Comparative analysis** between our original ontology and the `merge_ontology` provided in the course.
 - 🔗 **Final merged ontology** combining our model with the class-provided ontology for the final assignment.
@@ -18,4 +18,4 @@ Contains our fully developed ontology, including all newly introduced classes, r
 
 ## 📁 `FinalCombine_graph/`
 
-Contains the final ontology submitted for the assignment, combining our original version with the ontology provided in class.
+This refers to the **final merged ontology** used in the assignment, created by combining our ontology with those of all other project authors. This knowledge graph serves as the basis for reasoning tasks, semantic queries, and benchmarking.
